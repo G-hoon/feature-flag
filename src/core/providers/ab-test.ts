@@ -1,4 +1,4 @@
-import type { FeatureConfig, FeatureFlagProvider } from "../types";
+import type { FeatureConfig, IFeatureFlagProvider } from "../types";
 
 export interface ABTestSDK {
   getVariant(key: string): Promise<string | null>;
@@ -10,7 +10,7 @@ export interface ABTestProviderOptions {
   treatmentValue?: string;
 }
 
-export class ABTestProvider implements FeatureFlagProvider {
+export class ABTestProvider implements IFeatureFlagProvider {
   private sdk: ABTestSDK;
   private treatmentValue: string;
 

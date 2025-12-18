@@ -1,11 +1,11 @@
 import type {
   FeatureConfig,
-  FeatureFlagProvider,
+  IFeatureFlagProvider,
   FeatureFlagClientOptions,
 } from "./types";
 
 export class FeatureFlagClient {
-  private provider: FeatureFlagProvider;
+  private provider: IFeatureFlagProvider;
   private cache: Map<string, FeatureConfig> = new Map();
   private defaultValue: boolean;
   private initialized = false;

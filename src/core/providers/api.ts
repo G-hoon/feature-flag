@@ -1,11 +1,11 @@
-import type { FeatureConfig, FeatureFlagProvider } from "../types";
+import type { FeatureConfig, IFeatureFlagProvider } from "../types";
 
 export interface APIProviderOptions {
   baseUrl: string;
   headers?: Record<string, string>;
 }
 
-export class APIProvider implements FeatureFlagProvider {
+export class APIProvider implements IFeatureFlagProvider {
   private baseUrl: string;
   private headers: Record<string, string>;
 
