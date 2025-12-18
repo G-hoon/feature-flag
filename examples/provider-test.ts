@@ -2,7 +2,7 @@ import {
   StaticProvider,
   FeatureFlagClient,
   ABTestProvider,
-  ABTestSDK,
+  type ABTestSDK,
 } from "../src";
 
 async function testWithStaticProvider() {
