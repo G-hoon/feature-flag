@@ -1,6 +1,6 @@
-import type { FeatureConfig, FeatureFlagProvider } from "../types";
+import type { FeatureConfig, IFeatureFlagProvider } from "../types";
 
-export class StaticProvider implements FeatureFlagProvider {
+export class StaticProvider implements IFeatureFlagProvider {
   private flags: Record<string, FeatureConfig>;
 
   constructor(flags: Record<string, FeatureConfig>) {

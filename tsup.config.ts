@@ -7,4 +7,5 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   external: ["react"],
+  tsconfig: "./tsconfig.app.json",
 });
